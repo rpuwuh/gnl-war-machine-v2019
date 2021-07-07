@@ -19,24 +19,27 @@
 
 void	readfile(char *file, int print) {
 	int		fd;
-	int		ret;
 	char	*line;
 
 	fd = open(file, O_RDONLY);
 	if (fd == -1)
 		return ;
-	ret = 1;
-	while (ret > 0)
+	while (1)
 	{
-		ret = get_next_line(fd, &line);
+		line = get_next_line(fd);
+		if (!line)
+			break ;
 		if (print)
 			printf("%s\n", line);
 		free(line);
 	}
-	get_next_line(fd, &line);
-	if (print)
-		printf("%s\n", line);
-	free(line);
+	line = get_next_line(fd);
+	if (line)
+	{
+		if (print)
+			printf("%s\n", line);
+		free(line);
+	}
 	close(fd);
 }
 

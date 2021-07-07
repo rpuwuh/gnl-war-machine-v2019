@@ -13,6 +13,6 @@
 #ifndef GNL_H
 # define GNL_H
 
-int		get_next_line(int fd, char **line);
+char		*get_next_line(int fd);
 
 #endif

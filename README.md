@@ -2,4 +2,4 @@
 
 Tester for GNL
 
-It might be OK having errors in bonus part
+It might be OK to have errors in bonus part

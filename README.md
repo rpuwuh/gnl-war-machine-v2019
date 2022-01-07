@@ -1,3 +1,4 @@
 # gnl-war-machine-v2021
 
-just un war machine pour le gnl
+Tester for GNL
+It might be OK having errors in bonus part
